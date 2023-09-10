@@ -1,0 +1,42 @@
+.head-section {
+	position: relative;
+	z-index: 10001;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #222;
+}
+a.active{
+	color:#0f0;
+}
+ .logo{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+
+.navigation ul {
+    display: flex;
+    float: right;
+}
+
+.navigation ul li {
+    list-style: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+.navigation ul li :hover {
+
+    color: #0f0;
+}
