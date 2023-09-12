@@ -16,9 +16,7 @@
 		.head-section{
 			height: 70px;
 		}
-		th{
-			background-color: rgb(112, 112, 168);
-		}
+		
 	</style>
 
 </head>
