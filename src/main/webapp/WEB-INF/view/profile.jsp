@@ -289,11 +289,34 @@
         </div>
           <div class="inputBox">
             <div class="form-group">
+              <%
+              String role2=(String)session.getAttribute("role");
+              if(role2.equalsIgnoreCase("admin"))
+              {
+               %>
               <select class="form-control" name="role"  >
                 <option value="${Employee.role}">${Employee.role}</option>
                   <option value="admin">admin</option>
                   <option value="employee">employee</option>
               </select>
+              <%
+            }
+            %>
+
+            <%
+           
+            if(role2.equalsIgnoreCase("employee"))
+            {
+             %>
+            <select class="form-control" name="role" disabled>
+              <option value="${Employee.role}" >${Employee.role}</option>
+                <option value="admin">admin</option>
+                <option value="employee">employee</option>
+            </select>
+            <%
+          }
+          %>
+
           </div>
           </div>
           <div class="inputRight">
@@ -305,10 +328,30 @@
             <input type="text" required name="phone" value="${Employee.phone}">
             <i>phone*</i>
           </div>
+          <%
+          if(role2.equalsIgnoreCase("employee"))
+          {
+           %>
           <div class="inputBox">
-            <input type="text" required name="salary" value="${Employee.salary}">
+            <input type="text" required name="salary" value="${Employee.salary}" readonly>
             <i>salary*</i>
           </div>
+          <%
+        }
+        %>
+        <%
+        if(role2.equalsIgnoreCase("admin"))
+        {
+         %>
+        <div class="inputBox">
+          <input type="text" required name="salary" value="${Employee.salary}" >
+          <i>salary*</i>
+        </div>
+        <%
+      }
+      %>
+      
+       
           <div class="inputBox">
             <select class="form-control" name="SecurityQuestion"  >
               <option value="${Employee.securityQuestion}">${Employee.securityQuestion}</option>
